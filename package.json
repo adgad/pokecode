@@ -3,7 +3,7 @@
 	"displayName": "pokécode",
 	"publisher": "adgad",
 	"description": "Play Pokemon background music as you code",
-	"version": "0.13.7",
+	"version": "0.13.8",
 	"engines": {
 		"vscode": "^1.57.0"
 	},

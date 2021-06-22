@@ -47,9 +47,10 @@ function activate(context) {
 		vscode.window.showInformationMessage('Starting Pokémon music');
 
 
-		vscode.workspace.onDidOpenTextDocument(onOpen);
-		vscode.languages.onDidChangeDiagnostics(onDidChangeDiagnostics)
-		
+		let onOpenDisposer = vscode.workspace.onDidOpenTextDocument(onOpen);
+		let onChangeDisposer = vscode.languages.onDidChangeDiagnostics(onDidChangeDiagnostics);
+		context.subscriptions.push(onOpenDisposer);
+		context.subscriptions.push(onChangeDisposer);
 	});
 
 	let disposable2 = vscode.commands.registerCommand('pokecode.stop', function () {
@@ -100,6 +101,10 @@ async function onOpen() {
 			vscode.window.showInformationMessage('Entering a haunted forest in Lavender Town...');
 		} else if (isReadme) {
 			play('opening')
+		} else if (activeDocument.document.languageId.endsWith('scss')) { 
+			play('celadon');
+		} else if (activeDocument.document.languageId === 'html') { 
+			play('pewter');
 		} else {
 			play('pallettown');
 		}
