@@ -1,8 +1,9 @@
 {
 	"name": "pokecode",
-	"displayName": "pokecode",
+	"displayName": "pokécode",
+	"publisher": "adgad",
 	"description": "Play Pokemon background music as you code",
-	"version": "0.0.1",
+	"version": "0.13.7",
 	"engines": {
 		"vscode": "^1.57.0"
 	},
@@ -13,7 +14,10 @@
 		"onCommand:pokecode.background"
 	],
 	"main": "./extension.js",
-	"contributes": {
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adgad/pokecode"
+	},	"contributes": {
 		"commands": [
 			{
 				"command": "pokecode.background",

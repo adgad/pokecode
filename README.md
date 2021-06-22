@@ -25,6 +25,6 @@ I've barely tested it, and only on a Mac - so probably lots.
 
 Users appreciate release notes as you update your extension.
 
-### 1.0.0
+### 0.13.7
 
 Initial, and probably only, release.
